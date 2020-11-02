@@ -1,6 +1,11 @@
 [build]
   publish = "build/html"
   command = "npm run build"
+  base    = 'docs/'
+
+
+[context.production.environment]
+  PYTHON_VERSION = "3.7"
 
 # The following redirect is intended for use with most SPAs that handle
 # routing internally.
