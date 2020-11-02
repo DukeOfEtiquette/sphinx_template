@@ -1,0 +1,43 @@
+{
+  "name": "sphinx_template",
+  "version": "1.0.0",
+  "description": "This project serves as a templte for starting a new Sphinx project",
+  "watch": {
+    "build:dev": {
+      "patterns": [
+        "source"
+      ],
+      "extensions": "rst,py",
+      "quiet": true,
+      "legacyWatch": true,
+      "delay": 100,
+      "runOnChangeOnly": false
+    }
+  },
+  "scripts": {
+    "build": "npx make clean html",
+    "start": "live-server build/html --no-browser",
+    "watch": "npm-watch",
+    "build:dev": "npx make clean devhtml",
+    "start:dev": "live-server build_dev/html --no-browser --watch build_dev/html",
+    "devInstall:ext": "pip install -e $SPHINX_VELDUS_EXT_SRC",
+    "devInstall:theme": "pip install -e $SPHINX_VELDUS_THEME_SRC",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DukeOfEtiquette/sphinx_template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DukeOfEtiquette/sphinx_template/issues"
+  },
+  "homepage": "https://github.com/DukeOfEtiquette/sphinx_template#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "npm-watch": "^0.7.0"
+  },
+  "main": "index.js"
+}

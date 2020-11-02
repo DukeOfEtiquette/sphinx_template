@@ -1,0 +1,4 @@
+Sphinx Template
+===============
+
+Welcome!
